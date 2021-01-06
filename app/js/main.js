@@ -26,12 +26,15 @@ $(function () {
       $(btn).siblings().removeClass('catalogue-tabs-panel-btn--active');/*Убираем со всех кнопок активное состояние*/
       btn.classList.add('catalogue-tabs-panel-btn--active');/*Добавляем для нажатой кнопки активное состояние*/
 
-      let tabsPanelBtnText = $(btn).text();/* Берем текст нажатой кнопки */
-      $(btn).parents('.catalogue-tabs-panel').children('.catalogue-tabs-panel-btn--select').html(tabsPanelBtnText +
-        '<svg class="catalogue-tabs-panel-btn__arrow-icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.0729 1.71L3.77082 4.3C4.17707 4.69 4.83332 4.69 5.23957 4.3L7.93748 1.71C8.59373 1.08 8.12498 0 7.1979 0H1.80207C0.874982 0 0.416649 1.08 1.0729 1.71Z" fill="white" /></svg>'
-      );/* Берем текст нажатой кнопки */
+      if ($(document).width() < 768) {
+        let tabsPanelBtnText = $(btn).text();/* Берем текст нажатой кнопки */
+        $(btn).parents('.catalogue-tabs-panel').children('.catalogue-tabs-panel-btn--select').html(tabsPanelBtnText +
+          '<svg class="catalogue-tabs-panel-btn__arrow-icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.0729 1.71L3.77082 4.3C4.17707 4.69 4.83332 4.69 5.23957 4.3L7.93748 1.71C8.59373 1.08 8.12498 0 7.1979 0H1.80207C0.874982 0 0.416649 1.08 1.0729 1.71Z" fill="white" /></svg>'
+        );/* Берем текст нажатой кнопки */
+  
+        $(btn).parent('.catalogue-tabs-panel__control').slideUp();
+    }
 
-      $(btn).parent('.catalogue-tabs-panel__control').slideUp();
     });
 
   });
