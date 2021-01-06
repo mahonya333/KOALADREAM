@@ -1,0 +1,21 @@
+/* buttons start */
+.btn {
+    padding: 0.6rem 1.5rem;
+    border: none;
+    border-radius: 2px;
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 700;
+    outline: transparent;
+    &--green {
+        color: $color-white;
+        background-color: $color-light-green;
+    }
+
+    &--gray {
+        color: $color-gray;
+        background-color: $color-darken-white-smoke;
+    }
+}
+/* buttons end */

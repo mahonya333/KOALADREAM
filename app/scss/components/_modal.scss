@@ -1,0 +1,96 @@
+/* modal start */
+.modal,
+.modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 200;
+}
+.modal-background {
+    background: rgba(0, 0, 0, 0.46);
+}
+
+.modal {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    &.active {
+        display: flex;
+    }
+    &__title {
+        margin-top: 0;
+        margin-bottom: 2.9rem;
+        font-size: 2.4rem;
+        line-height: 1;
+        font-weight: 700;
+        color: $color-nero;
+    }
+}
+
+.modal-card {
+    max-width: 45.8rem;
+    width: 100%;
+    padding: 4.4rem 6.2rem 3.1rem 3.4rem;
+    border-radius: 5px;
+    position: relative;
+    z-index: 200;
+    background-color: $color-white;
+}
+
+.modal-form {
+    &__box {
+        & + & {
+            margin-top: 2rem;
+        }
+        &.modal-form__submit-wrapper {
+            margin-top: 3.6rem;
+        }
+    }
+
+    &__label {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+        color: $color-nero;
+    }
+
+    &__input {
+        width: 100%;
+        padding: 0.5rem 1.8rem;
+        border: 1px solid $color-white-smoke;
+        font-family: "Lato", sans-serif;
+        border-radius: 2px;
+        font-size: 1.4rem;
+        line-height: 2.4rem;
+        font-weight: 300;
+        color: $color-nero;
+    }
+
+    &__input[type="number"]::-webkit-outer-spin-button,
+    &__input[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+}
+
+
+.modal-form-btn-submit {
+    max-width: 16.8rem;
+    width: 100%;
+    padding-top: 0.8rem;
+    padding-bottom: 0.8rem;
+}
+
+.close-modal-btn {
+    padding: 0;
+    border: none;
+    position: absolute;
+    top: 1.8rem;
+    right: 1.8rem;
+    background: transparent;
+    outline: transparent;
+}
+/* modal end */

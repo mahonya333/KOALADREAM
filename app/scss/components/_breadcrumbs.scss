@@ -1,0 +1,37 @@
+/* breadcrumbs start */
+.breadcrumbs {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    &__item {
+        padding-left: 1rem;
+        line-height: 2.6rem;
+        @include breakpoint($mobile-width) {
+            padding-left: 0.5rem;
+        }
+    }
+
+    &__item:first-child {
+        padding-left: 0;
+        padding-right: 1rem;
+        border-right: 1px solid $color-nero;
+        @include breakpoint($mobile-width) {
+            padding-left: 0;
+            padding-right: 0.5rem;
+        }
+
+        .breadcrumbs__link {
+            border-bottom: 1px solid $color-nero;
+            color: $color-nero;
+        }
+    }
+
+    &__link {
+        font-size: 1.4rem;
+        line-height: 1.68rem;
+        font-weight: 700;
+        color: $color-surva-gray3;
+        text-decoration: none;
+    }
+}
+/* breadcrumbs end */

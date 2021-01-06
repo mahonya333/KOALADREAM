@@ -1,0 +1,19 @@
+.info-message {
+    display: none;
+    &--active {
+        display: block;
+        max-width: 29rem;
+        width: 100%;
+        padding: 2.3rem 3rem 2.1rem 2.1rem;
+        border-left: 0.5rem solid $color-light-green;
+        font-size: 1.6rem;
+        line-height: 2.4rem;
+        font-weight: 700;
+        background-color: $color-white;
+        position: fixed;
+        right: 0;
+        top: 0;
+        z-index: 199;
+        transition: all .3s ease-in-out;
+    }
+}

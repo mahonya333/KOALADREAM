@@ -1,0 +1,24 @@
+/* price start */
+.price {
+    font-weight: 700;
+}
+
+.price-new {
+    display: inline-block;
+    max-width: 11.5rem;
+    width: 100%;
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    color: $color-nero;
+}
+
+.price-old {
+    display: inline-block;
+    max-width: 11.5rem;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 1;
+    text-decoration: line-through;
+    color: $color-dim-gray;
+}
+/* price end */
