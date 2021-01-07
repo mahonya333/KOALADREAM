@@ -2,9 +2,10 @@
 @import "vars";
 @import "global";
 @import "fonts";
+@import "components/btn";
+@import "components/form";
 @import "components/basket-link";
 @import "components/price";
-@import "components/btn";
 @import "components/breadcrumbs";
 @import "components/cart-item-count";
 @import "components/modal";
@@ -119,9 +120,6 @@
 .burger-menu-btn {
     display: none;
     padding: 0;
-    border: none;
-    background: transparent;
-    outline: transparent;
 
     &:hover {
         .burger-menu-btn__icon path {
@@ -291,25 +289,17 @@
 
 .header-control-btn-number {
     padding: 0;
-    border: none;
-    font-family: "Lato", sans-serif;
     font-size: 1.2rem;
     line-height: 1.8rem;
     color: $color-nero;
-    background: transparent;
-    outline: transparent;
 }
 
 .header-control-btn-language {
     padding: 0;
-    border: none;
-    font-family: "Lato", sans-serif;
     font-size: 1.2rem;
     line-height: 1.8rem;
     font-weight: 700;
     color: $color-nero;
-    background: transparent;
-    outline: transparent;
 }
 
 .header-open-modal-number {
@@ -322,16 +312,63 @@
 /* header end */
 /* main start */
 .main {
-    padding-top: 11.1rem;
-    padding-bottom: 15.5rem;
+    padding-top: 5.2rem;
+    padding-bottom: 4.1rem;
     position: relative;
     overflow: hidden;
+    background-color: #F8F6F8;
 
     &__inner {
+        padding-top: 5.9rem;
+        padding-bottom: 11.4rem;
+        position: relative;
+
+        @include breakpoint($mobile-width) {
+            display: flex;
+            flex-direction: column;
+            padding-top: 0;
+            padding-bottom: 0;
+        }
+    }
+    .small-container {
+        @include breakpoint($mobile-width) {
+            order: 2;
+        }
+    }
+
+    &__img {
+        width: 50%;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 2;
+        -o-object-fit: cover;
+        object-fit: cover;
+
+        @include breakpoint($tablet-width) {
+            width: 60%;
+        }
+
+        @include breakpoint($mobile-width) {
+            width: 100%;
+            order: 1;
+            position: static;
+            transform: initial;
+        }
     }
 
     &__content {
         width: 50%;
+
+        @include breakpoint($tablet-width) {
+            width: 40%;
+        }
+
+        @include breakpoint($mobile-width) {
+            width: 100%;
+            padding-top: 3.7rem;
+        }
     }
 
     &__title {
@@ -341,6 +378,13 @@
         line-height: 4.4rem;
         font-weight: 700;
         color: $color-nero;
+
+        @include breakpoint($mobile-width) {
+            margin-bottom: 1.4rem;
+            font-size: 2.4rem;
+            line-height: 3rem;
+            text-align: center;
+        }
     }
 
     &__subtitle {
@@ -350,6 +394,11 @@
         line-height: 2.4rem;
         font-weight: 700;
         color: $color-surva-gray;
+
+        @include breakpoint($mobile-width) {
+            margin-bottom: 2.2rem;
+            text-align: center;
+        }
     }
 
     &__link {
@@ -359,23 +408,18 @@
         &.btn--green {
             max-width: 16.8rem;
             width: 100%;
-            padding-top: 0.8rem;
-            padding-bottom: 0.8rem;
+        }
+
+        @include breakpoint($mobile-width) {
+            margin: 0 auto;
         }
     }
 
-    &__img {
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-        z-index: -1;
-        object-fit: cover;
-    }
 }
 /* main end */
 /* advantages start */
 .advantages {
+    padding-top: 6.7rem;
     &__inner {
         display: flex;
     }
@@ -432,7 +476,7 @@
 /* advantages end */
 /* catalogue start */
 .catalogue {
-    padding-top: 4rem;
+    padding-top: 8rem;
     padding-bottom: 5.6rem;
 
     &__title {
@@ -543,13 +587,9 @@
 
 .catalogue-tabs-panel-btn {
     width: 100%;
-    padding: 1.6rem 0;
-    border: none;
-    font-family: "Lato", sans-serif;
+    padding: 1.1rem 0;
     font-size: 1.3rem;
     font-weight: 700;
-    background-color: $color-white;
-    outline: transparent;
 
     @include breakpoint($mobile-width) {
         padding-left: 1.8rem;
@@ -560,6 +600,10 @@
     &--active {
         color: $color-white;
         background-color: $color-charcoal;
+        &:hover {
+            color: $color-white;
+            background-color: $color-charcoal;
+        }
     }
 
     &--select {
@@ -669,7 +713,8 @@
 }
 
 .catalogue-products-all-btn {
-    padding: 0.8rem 3.9rem;
+    padding-left: 3.9rem;
+    padding-right: 3.9rem;
 }
 /* catalogue end */
 /* about start */
@@ -1145,8 +1190,6 @@
     &__control-btn {
         max-width: 16.8rem;
         width: 100%;
-        padding-top: 0.8rem;
-        padding-bottom: 0.8rem;
         & + & {
             margin-left: 3rem;
 
@@ -1588,8 +1631,7 @@
         position: relative;
     }
 
-    &__select,
-    &__input {
+    &__select {
         width: 100%;
         border: 1px solid $color-white-smoke;
         font-family: "Lato", sans-serif;
@@ -1598,14 +1640,6 @@
         line-height: 2.4rem;
         font-weight: 300;
         color: $color-nero;
-    }
-    &__input {
-        padding: 0.5rem 1.8rem;
-    }
-
-    &__input[type="number"]::-webkit-outer-spin-button,
-    &__input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
     }
 
     &__select {
@@ -1759,14 +1793,10 @@
     align-items: center;
     justify-content: center;
     padding: 0;
-    border: none;
-    font-family: "Lato", sans-serif;
     font-size: 1.6rem;
     line-height: 2.2rem;
     font-weight: 700;
-    background: transparent;
     color: $color-nero;
-    outline: transparent;
     @include breakpoint($mobile-width) {
         font-size: 1.4rem;
     }

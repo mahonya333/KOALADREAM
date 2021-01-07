@@ -1,21 +1,55 @@
 /* buttons start */
 .btn {
-    padding: 0.6rem 1.5rem;
+    padding: 0.8rem 1.5rem;
     border: none;
     border-radius: 2px;
     font-family: "Lato", sans-serif;
     font-size: 1.4rem;
     line-height: 2.4rem;
     font-weight: 700;
+    background: transparent;
+    transition: all 0.3s ease-in-out;
     outline: transparent;
+
+    &:focus {
+        outline: 2px solid $color-bright-turquoise;
+    }
+
     &--green {
         color: $color-white;
         background-color: $color-light-green;
+
+        &:hover {
+            background-color: $color-dark-green;
+        }
+
+        &:active {
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        }
     }
 
     &--gray {
         color: $color-gray;
         background-color: $color-darken-white-smoke;
+
+        &:hover {
+            background-color: $color-gainsboro2;
+        }
+
+        &:active {
+            box-shadow: inset 0px 0px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+
+    &--dark-gray {
+        &:hover {
+            background-color: $color-white-smoke5;
+        }
+
+        &:active {
+            color: $color-white;
+            background-color: $color-charcoal;
+        }
     }
 }
 /* buttons end */

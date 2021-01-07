@@ -1,0 +1,32 @@
+.label {
+
+}
+
+.input {
+    width: 100%;
+    padding: 0.5rem 1.8rem;
+    border-radius: 2px;
+    border: 1px solid $color-white-smoke;
+    font-family: "Lato", sans-serif;
+    font-size: 1.4rem;
+    line-height: 2.4rem;
+    font-weight: 300;
+    color: $color-nero;
+    
+    &[type="number"]::-webkit-outer-spin-button,
+    &[type="number"]::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    &:hover {
+        border-color: $color-light-gray;
+    }
+
+    &:active {
+        border-color: $color-bay-leaf;
+    }
+
+    &:focus {
+        outline: 2px solid $color-bright-turquoise;
+    }
+}

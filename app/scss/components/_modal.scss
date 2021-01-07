@@ -58,22 +58,7 @@
         color: $color-nero;
     }
 
-    &__input {
-        width: 100%;
-        padding: 0.5rem 1.8rem;
-        border: 1px solid $color-white-smoke;
-        font-family: "Lato", sans-serif;
-        border-radius: 2px;
-        font-size: 1.4rem;
-        line-height: 2.4rem;
-        font-weight: 300;
-        color: $color-nero;
-    }
 
-    &__input[type="number"]::-webkit-outer-spin-button,
-    &__input[type="number"]::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
 }
 
 

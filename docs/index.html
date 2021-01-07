@@ -27,13 +27,13 @@
                 <div class="modal-form__box">
                     <label class="modal-form__label">
                         Имя и Фамилия
-                        <input class="modal-form__input" min="0" type="number">
+                        <input class="input modal-form__input" min="0" type="number">
                     </label>
                 </div>
                 <div class="modal-form__box">
                     <label class="modal-form__label">
                         Номер телефона
-                        <input class="modal-form__input" min="0" type="number">
+                        <input class="input modal-form__input" min="0" type="number">
                     </label>
                 </div>
                 <div class="modal-form__box modal-form__submit-wrapper">
@@ -61,7 +61,7 @@
                 <div class="modal-form__box">
                     <label class="modal-form__label">
                         Номер телефона
-                        <input class="modal-form__input" min="0" type="number">
+                        <input class="input modal-form__input" min="0" type="number">
                     </label>
                 </div>
                 <div class="modal-form__box modal-form__submit-wrapper">
@@ -192,7 +192,7 @@
                 </div>
                 <div class="container">
                     <div class="header__inner">
-                        <button class="burger-menu-btn" onclick="openHeaderMobileMenu();">
+                        <button class="btn burger-menu-btn" onclick="openHeaderMobileMenu();">
                             <svg class="burger-menu-btn__icon" width="20" height="14" viewBox="0 0 20 14" fill="none"
                                 xmlns="http://www.w3.org/2000/svg">
                                 <path
@@ -272,7 +272,7 @@
 
                         <div class="header__control is-hidden-mobile">
                             <div class="header__control-box">
-                                <button class="header-control-btn-number"
+                                <button class="btn header-control-btn-number"
                                     onclick="toggleDropdownHeaderMenu(this, '.header__control-list');">
                                     +380(24)83-88-322
                                     <svg class="header__control-box-arrow" width="6" height="4" viewBox="0 0 6 4"
@@ -290,7 +290,7 @@
                                 </ul>
                             </div>
                             <div class="header__control-box">
-                                <button class="header-control-btn-language"
+                                <button class="btn header-control-btn-language"
                                     onclick="toggleDropdownHeaderMenu(this, '.header__control-list');">
                                     Ru
                                     <svg class="header__control-box-arrow" width="6" height="4" viewBox="0 0 6 4"
@@ -332,8 +332,8 @@
                 </div>
             </header>
             <main class="main">
-                <div class="container small-container">
-                    <div class="main__inner">
+                <div class="container main__inner">
+                    <div class="small-container">
                         <div class="main__content">
                             <h1 class="main__title">
                                 Постельное белье для
@@ -345,10 +345,9 @@
                             <a class="btn btn--green main__link" href="#catalogue" onclick="smoothScroll(this)">Смотреть
                                 каталог</a>
                         </div>
-
                     </div>
+                    <img class="main__img" src="images/1.gif" alt="">
                 </div>
-                <img class="main__img" src="images/main.jpg" alt="">
             </main>
             <section class="advantages">
                 <div class="container small-container">
@@ -400,9 +399,11 @@
                     <p class="catalogue__subtitle">Выберите необходимый размер</p>
 
                     <div class="catalogue-tabs-panel small-container">
-                        <button class="catalogue-tabs-panel-btn catalogue-tabs-panel-btn--select" onclick="toggleCatalogueTabsBtn(this);">
+                        <button class="btn catalogue-tabs-panel-btn catalogue-tabs-panel-btn--select"
+                            onclick="toggleCatalogueTabsBtn(this);">
                             Полуторный
-                            <svg class="catalogue-tabs-panel-btn__arrow-icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="catalogue-tabs-panel-btn__arrow-icon" width="9" height="5" viewBox="0 0 9 5"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M1.0729 1.71L3.77082 4.3C4.17707 4.69 4.83332 4.69 5.23957 4.3L7.93748 1.71C8.59373 1.08 8.12498 0 7.1979 0H1.80207C0.874982 0 0.416649 1.08 1.0729 1.71Z"
                                     fill="white" />
@@ -412,14 +413,14 @@
 
                         <div class="catalogue-tabs-panel__control">
                             <button
-                                class="catalogue-tabs-panel-btn catalogue-tabs-panel-btn--active">Полуторный</button>
-                            <button class="catalogue-tabs-panel-btn">Двуспальный</button>
-                            <button class="catalogue-tabs-panel-btn">Евро</button>
-                            <button class="catalogue-tabs-panel-btn">Семейный</button>
-                            <button class="catalogue-tabs-panel-btn">Детский</button>
-                            <button class="catalogue-tabs-panel-btn">Пледы</button>
-                            <button class="catalogue-tabs-panel-btn">Одеяла</button>
-                            <button class="catalogue-tabs-panel-btn">Простыни</button>
+                                class="btn btn--dark-gray catalogue-tabs-panel-btn catalogue-tabs-panel-btn--active">Полуторный</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Двуспальный</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Евро</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Семейный</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Детский</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Пледы</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Одеяла</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Простыни</button>
                         </div>
 
                         <div class="catalogue-tabs-panel__info">
@@ -436,9 +437,11 @@
                     <h3 class="catalogue__title-fabric">Ткани</h3>
 
                     <div class="catalogue-tabs-panel small-container">
-                        <button class="catalogue-tabs-panel-btn catalogue-tabs-panel-btn--select" onclick="toggleCatalogueTabsBtn(this);">
+                        <button class="btn catalogue-tabs-panel-btn catalogue-tabs-panel-btn--select"
+                            onclick="toggleCatalogueTabsBtn(this);">
                             Все ткани
-                            <svg class="catalogue-tabs-panel-btn__arrow-icon" width="9" height="5" viewBox="0 0 9 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="catalogue-tabs-panel-btn__arrow-icon" width="9" height="5" viewBox="0 0 9 5"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path
                                     d="M1.0729 1.71L3.77082 4.3C4.17707 4.69 4.83332 4.69 5.23957 4.3L7.93748 1.71C8.59373 1.08 8.12498 0 7.1979 0H1.80207C0.874982 0 0.416649 1.08 1.0729 1.71Z"
                                     fill="white" />
@@ -447,10 +450,10 @@
                         </button>
 
                         <div class="catalogue-tabs-panel__control">
-                            <button class="catalogue-tabs-panel-btn catalogue-tabs-panel-btn--active">Все ткани</button>
-                            <button class="catalogue-tabs-panel-btn">Поликоттон 3D</button>
-                            <button class="catalogue-tabs-panel-btn">Ранфорс</button>
-                            <button class="catalogue-tabs-panel-btn">Сатин</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn catalogue-tabs-panel-btn--active">Все ткани</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Поликоттон 3D</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Ранфорс</button>
+                            <button class="btn btn--dark-gray catalogue-tabs-panel-btn">Сатин</button>
                         </div>
 
                         <div class="catalogue-tabs-panel__info">
@@ -463,6 +466,114 @@
                     </div>
 
                     <div class="catalogue-products">
+                        <div class="catalogue-product">
+                            <img class="catalogue-product__img" src="images/product-img1.jpg" alt="">
+                            <div class="catalogue-product__info">
+                                <h4 class="catalogue-product__name">Комплект из Поликоттона 3D</h4>
+                                <p class="catalogue-product__code">Код товара: 2325</p>
+                                <div class="price">
+                                    <span class="price-new">2,200 грн</span>
+                                    <span class="price-old">1,900 грн</span>
+                                </div>
+                                <div class="catalogue-product__control">
+                                    <button class="catalogue-product__control-btn btn btn--green"
+                                        onclick="openModalOrder();">Купить в 1
+                                        клик</button>
+                                    <button class="catalogue-product__control-btn btn btn--gray">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalogue-product">
+                            <img class="catalogue-product__img" src="images/product-img2.jpg" alt="">
+                            <div class="catalogue-product__info">
+                                <h4 class="catalogue-product__name">Комплект из Поликоттона 3D</h4>
+                                <p class="catalogue-product__code">Код товара: 2325</p>
+                                <div class="price">
+                                    <span class="price-new">2,200 грн</span>
+                                    <span class="price-old">1,900 грн</span>
+                                </div>
+                                <div class="catalogue-product__control">
+                                    <button class="catalogue-product__control-btn btn btn--green"
+                                        onclick="openModalOrder();">Купить в 1
+                                        клик</button>
+                                    <button class="catalogue-product__control-btn btn btn--gray">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalogue-product">
+                            <img class="catalogue-product__img" src="images/product-img3.jpg" alt="">
+                            <div class="catalogue-product__info">
+                                <h4 class="catalogue-product__name">Комплект из Поликоттона 3D</h4>
+                                <p class="catalogue-product__code">Код товара: 2325</p>
+                                <div class="price">
+                                    <span class="price-new">2,200 грн</span>
+                                    <span class="price-old">1,900 грн</span>
+                                </div>
+                                <div class="catalogue-product__control">
+                                    <button class="catalogue-product__control-btn btn btn--green"
+                                        onclick="openModalOrder();">Купить в 1
+                                        клик</button>
+                                    <button class="catalogue-product__control-btn btn btn--gray">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalogue-product">
+                            <img class="catalogue-product__img" src="images/product-img1.jpg" alt="">
+                            <div class="catalogue-product__info">
+                                <h4 class="catalogue-product__name">Комплект из Поликоттона 3D</h4>
+                                <p class="catalogue-product__code">Код товара: 2325</p>
+                                <div class="price">
+                                    <span class="price-new">2,200 грн</span>
+                                    <span class="price-old">1,900 грн</span>
+                                </div>
+                                <div class="catalogue-product__control">
+                                    <button class="catalogue-product__control-btn btn btn--green"
+                                        onclick="openModalOrder();">Купить в 1
+                                        клик</button>
+                                    <button class="catalogue-product__control-btn btn btn--gray">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalogue-product">
+                            <img class="catalogue-product__img" src="images/product-img2.jpg" alt="">
+                            <div class="catalogue-product__info">
+                                <h4 class="catalogue-product__name">Комплект из Поликоттона 3D</h4>
+                                <p class="catalogue-product__code">Код товара: 2325</p>
+                                <div class="price">
+                                    <span class="price-new">2,200 грн</span>
+                                    <span class="price-old">1,900 грн</span>
+                                </div>
+                                <div class="catalogue-product__control">
+                                    <button class="catalogue-product__control-btn btn btn--green"
+                                        onclick="openModalOrder();">Купить в 1
+                                        клик</button>
+                                    <button class="catalogue-product__control-btn btn btn--gray">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="catalogue-product">
+                            <img class="catalogue-product__img" src="images/product-img3.jpg" alt="">
+                            <div class="catalogue-product__info">
+                                <h4 class="catalogue-product__name">Комплект из Поликоттона 3D</h4>
+                                <p class="catalogue-product__code">Код товара: 2325</p>
+                                <div class="price">
+                                    <span class="price-new">2,200 грн</span>
+                                    <span class="price-old">1,900 грн</span>
+                                </div>
+                                <div class="catalogue-product__control">
+                                    <button class="catalogue-product__control-btn btn btn--green"
+                                        onclick="openModalOrder();">Купить в 1
+                                        клик</button>
+                                    <button class="catalogue-product__control-btn btn btn--gray">В корзину</button>
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="catalogue-product">
                             <img class="catalogue-product__img" src="images/product-img1.jpg" alt="">
                             <div class="catalogue-product__info">

@@ -7,18 +7,14 @@
     border-radius: 2px;
     &__input {
         width: 5.1rem;
+        padding: 0;
         border: none;
-        font-family: "Lato", sans-serif;
+        border-radius: 0;
         font-size: 1.6rem;
-        line-height: 2.4rem;
         font-weight: 700;
         text-align: center;
     }
 
-    &__input::-webkit-outer-spin-button,
-    &__input::-webkit-inner-spin-button {
-        -webkit-appearance: none;
-    }
 }
 
 .cart-item-count-btn {
