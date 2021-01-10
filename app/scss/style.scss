@@ -668,11 +668,16 @@
     }
 
     &__name {
-        margin: 0;
         font-size: 1.6rem;
         line-height: 2.4rem;
         font-weight: 700;
+        text-decoration: none;
         color: $color-nero;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-light-green;
+        }
     }
 
     &__code {
@@ -1450,6 +1455,11 @@
         line-height: 1.9rem;
         font-weight: 700;
         color: $color-nero;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-light-green;
+        }
     }
 
     &__code {
@@ -1877,6 +1887,11 @@
         line-height: 1.68rem;
         text-decoration: none;
         color: $color-white;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-light-green;
+        }
 
         &--email {
             border-bottom: 1px solid $color-white;
@@ -1899,6 +1914,11 @@
         line-height: 1.92rem;
         text-decoration: none;
         color: $color-white;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-light-green;
+        }
     }
 
     &__socials-list {
