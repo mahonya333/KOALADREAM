@@ -13,9 +13,15 @@
 
 /* header start */
 .header {
+    width: 100%;
     padding-top: 1rem;
     padding-bottom: 1rem;
     border-bottom: 1px solid $color-white-smoke;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 200;
+    background-color: $color-white;
     &__inner {
         display: flex;
         justify-content: space-between;
@@ -74,6 +80,7 @@
         display: flex;
         align-items: center;
         position: relative;
+        text-decoration: none;
     }
 
     &__cart-box {
@@ -108,11 +115,10 @@
         right: 0.5rem;
     }
 
-    &__cart-link {
+    &__cart-text {
         font-size: 1.4rem;
         line-height: 2.1rem;
         font-weight: 700;
-        text-decoration: none;
         color: $color-nero;
     }
 }
@@ -336,7 +342,7 @@
         }
     }
 
-    &__img {
+/*     &__img {
         width: 50%;
         position: absolute;
         right: 0;
@@ -356,7 +362,7 @@
             position: static;
             transform: initial;
         }
-    }
+    } */
 
     &__content {
         width: 50%;
@@ -526,7 +532,6 @@
         display: flex;
 
         @include breakpoint($mobile-width) {
-            display: none;
             flex-direction: column;
         }
     }
@@ -1216,6 +1221,7 @@
 
 .product-slider {
     padding-bottom: 2rem;
+    position: relative;
 
     @include breakpoint($mobile-width) {
         position: relative;
@@ -1269,6 +1275,34 @@
         @include breakpoint($mobile-width) {
             height: 29.1rem;
         }
+    }
+
+    .slick-arrow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 2.5rem;
+        height: 2.5rem;
+        border: 1px solid #242424;
+        border-radius: 3px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        background-color:$color-light-green;
+        outline: transparent;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            background-color: $color-dark-green;
+        }
+    }
+    .slick-next {
+        right: 0.5rem;
+    }
+
+    .slick-prev {
+        left: 0.5rem;
     }
 }
 
@@ -1776,6 +1810,11 @@
         line-height: 2.1rem;
         font-weight: 700;
         color: $color-nero;
+        transition: all .3s ease-in-out;
+
+        &:hover {
+            color: $color-light-green;
+        }
     }
 
     &__info-box {

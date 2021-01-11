@@ -6,7 +6,7 @@
     left: 0;
     right: 0;
     bottom: 0;
-    z-index: 200;
+    z-index: 500;
 }
 .modal-background {
     background: rgba(0, 0, 0, 0.46);
@@ -35,7 +35,7 @@
     padding: 4.4rem 6.2rem 3.1rem 3.4rem;
     border-radius: 5px;
     position: relative;
-    z-index: 200;
+    z-index: 501;
     background-color: $color-white;
 }
 

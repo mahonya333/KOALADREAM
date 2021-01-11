@@ -75,7 +75,7 @@
         Спасибо! Наши менеджеры вам перезвонят.
     </div>
 
-    
+
     <div class="site-wrapper">
 
         <div class="site-content">
@@ -309,7 +309,7 @@
                             </div>
                         </div>
 
-                        <div class="header__cart header__cart--active">
+                        <a class="header__cart header__cart--active" href="cart.html">
                             <div class="header__cart-box">
                                 <svg class="header__cart-img" width="26" height="23" viewBox="0 0 26 23" fill="none"
                                     xmlns="http://www.w3.org/2000/svg">
@@ -319,12 +319,12 @@
                                 </svg>
                                 <span class="header__cart-count-products">1</span>
                             </div>
-                            <a class="header__cart-link" href="cart.html">Корзина</a>
-                        </div>
+                            <span class="header__cart-text">Корзина</span>
+                        </a>
                     </div>
                 </div>
             </header>
-            
+
             <section class="product">
                 <div class="container small-container">
                     <ul class="breadcrumbs">
@@ -408,7 +408,8 @@
 
                                     <div class="product-information__count">
                                         <div class="cart-item-count">
-                                            <button class="cart-item-count-btn cart-item-count-btn--remove" type="button">
+                                            <button class="btn cart-item-count-btn cart-item-count-btn--remove"
+                                                type="button">
                                                 <svg width="12" height="2" viewBox="0 0 12 2" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -417,7 +418,8 @@
                                                 </svg>
                                             </button>
                                             <input class="input cart-item-count__input" type="number" min="1" value="1">
-                                            <button class="cart-item-count-btn cart-item-count-btn--add" type="button">
+                                            <button class="btn cart-item-count-btn cart-item-count-btn--add"
+                                                type="button">
                                                 <svg width="12" height="12" viewBox="0 0 12 12" fill="none"
                                                     xmlns="http://www.w3.org/2000/svg">
                                                     <path
@@ -434,7 +436,8 @@
                                         <span class="price-old">1,900 грн</span>
                                     </div>
                                     <div class="product__control">
-                                        <button class="product__control-btn btn btn--green" onclick="openModalOrder();" type="button">Купить в 1
+                                        <button class="product__control-btn btn btn--green" onclick="openModalOrder();"
+                                            type="button">Купить в 1
                                             клик</button>
                                         <button class="product__control-btn btn btn--gray" type="button">В
                                             корзину</button>
@@ -453,9 +456,21 @@
                         получения товара.
                     </p>
                     <video class="product-description__video" controls>
+                        <!-- MP4 для Safari, IE9, iPhone, iPad, Android, и Windows Phone 7 -->
                         <source
-                            src="video/[ДЕМО с рекламой] Кровать Romen- сдержанность стиля – основательность исполнения!.mp4"
-                            type="video/mp4">
+                            src="video/1.mp4"
+                            type="video/mp4"> 
+                        <!-- WebM/VP8 для Firefox4, Opera, и Chrome -->
+
+                        <source src="video/1.webm" type="video/webm"> 
+
+                        <!-- Ogg/Vorbis для старых версий браузеров Firefox и Opera -->
+                        <source src="video/1.ogv" type="video/ogg">
+
+                        <!-- добавляем видеоконтент для устаревших браузеров, в которых нет поддержки элемента video -->
+                        <object data="video.swf" type="application/x-shockwave-flash">
+                            <param name="movie" value="video/1.swf">
+                        </object>
                     </video>
                 </div>
             </section>

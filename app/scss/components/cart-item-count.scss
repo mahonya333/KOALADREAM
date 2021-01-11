@@ -23,14 +23,18 @@
     justify-content: center;
     min-width: 3rem;
     padding: 0;
-    border: none;
-    background: transparent;
+    z-index: 2;
+
     &--add {
         border-left: 1px solid $color-white-smoke;
     }
 
     &--remove {
         border-right: 1px solid $color-white-smoke;
+    }
+
+    &:hover {
+        background-color: $color-gainsboro2;
     }
 }
 /* cart-item-count end */
