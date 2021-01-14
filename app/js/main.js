@@ -51,8 +51,9 @@ $(function () {
   /* Конец задаем функционал кнопкам-переключателям */
 
   /* Старт плагин formstyler */
-  $('select.order-form__select').styler();
-
+  setTimeout(function() {
+    $('select.order-form__select').styler();
+  }, 100)
   /*Конец плагин formstyler */
   /* Старт Slick-slider на странице product */
   $('.product-slider').slick({
