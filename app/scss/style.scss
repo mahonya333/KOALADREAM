@@ -1684,9 +1684,9 @@
         color: $color-nero;
     }
 
-    select {
+    &__select {
         display: none;
-/*         @include breakpoint($mobile-width) {
+        @include breakpoint($mobile-width) {
             display: block;
             width: 100%;
             padding: 0.8rem 1.8rem;
@@ -1697,7 +1697,7 @@
             line-height: 2.4rem;
             font-weight: 300;
             color: #242424;
-        } */
+        }
     }
 
     .jq-selectbox {

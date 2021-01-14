@@ -52,10 +52,9 @@ $(function () {
 
   /* Старт плагин formstyler */
   setTimeout(function() {
-    $('select.order-form__select').styler();
- /*    if ($(document).width() > 768) {
-      
-    } */
+    if ($(document).width() > 768) {
+      $('select.order-form__select').styler();
+    }
   }, 100)
 
   /*Конец плагин formstyler */
