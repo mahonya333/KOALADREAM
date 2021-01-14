@@ -322,7 +322,7 @@
     padding-bottom: 4.1rem;
     position: relative;
     overflow: hidden;
-    background-color: #F8F6F8;
+    background-color: #f8f6f8;
 
     &__inner {
         padding-top: 5.9rem;
@@ -342,7 +342,7 @@
         }
     }
 
-/*     &__img {
+    /*     &__img {
         width: 50%;
         position: absolute;
         right: 0;
@@ -420,7 +420,6 @@
             margin: 0 auto;
         }
     }
-
 }
 /* main end */
 /* advantages start */
@@ -616,11 +615,10 @@
 
         @include breakpoint($mobile-width) {
             display: block;
-            color: $color-white;  
+            color: $color-white;
             position: relative;
             background-color: $color-charcoal;
         }
-
     }
 
     & + & {
@@ -678,7 +676,7 @@
         font-weight: 700;
         text-decoration: none;
         color: $color-nero;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: $color-light-green;
@@ -1289,9 +1287,9 @@
         top: 50%;
         transform: translateY(-50%);
         z-index: 1;
-        background-color:$color-light-green;
+        background-color: $color-light-green;
         outline: transparent;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             background-color: $color-dark-green;
@@ -1489,7 +1487,7 @@
         line-height: 1.9rem;
         font-weight: 700;
         color: $color-nero;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: $color-light-green;
@@ -1686,8 +1684,20 @@
         color: $color-nero;
     }
 
-    &__select {
+    select {
         display: none;
+/*         @include breakpoint($mobile-width) {
+            display: block;
+            width: 100%;
+            padding: 0.8rem 1.8rem;
+            border-radius: 2px;
+            border: 1px solid #f2f2f2;
+            font-family: "Lato", sans-serif;
+            font-size: 1.4rem;
+            line-height: 2.4rem;
+            font-weight: 300;
+            color: #242424;
+        } */
     }
 
     .jq-selectbox {
@@ -1810,7 +1820,7 @@
         line-height: 2.1rem;
         font-weight: 700;
         color: $color-nero;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: $color-light-green;
@@ -1926,7 +1936,7 @@
         line-height: 1.68rem;
         text-decoration: none;
         color: $color-white;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: $color-light-green;
@@ -1953,7 +1963,7 @@
         line-height: 1.92rem;
         text-decoration: none;
         color: $color-white;
-        transition: all .3s ease-in-out;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             color: $color-light-green;

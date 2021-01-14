@@ -53,7 +53,11 @@ $(function () {
   /* Старт плагин formstyler */
   setTimeout(function() {
     $('select.order-form__select').styler();
+ /*    if ($(document).width() > 768) {
+      
+    } */
   }, 100)
+
   /*Конец плагин formstyler */
   /* Старт Slick-slider на странице product */
   $('.product-slider').slick({
