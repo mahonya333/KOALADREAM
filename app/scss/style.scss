@@ -1,7 +1,8 @@
 @import "mixins";
 @import "vars";
-@import "global";
+@import "animations";
 @import "fonts";
+@import "global";
 @import "components/btn";
 @import "components/form";
 @import "components/basket-link";
@@ -324,6 +325,10 @@
     overflow: hidden;
     background-color: #f8f6f8;
 
+    @include breakpoint($mobile-width) {
+        padding-top: 0;
+    }
+
     &__inner {
         padding-top: 5.9rem;
         padding-bottom: 11.4rem;
@@ -342,7 +347,7 @@
         }
     }
 
-    /*     &__img {
+    &__img {
         width: 50%;
         position: absolute;
         right: 0;
@@ -351,6 +356,13 @@
         z-index: 2;
         -o-object-fit: cover;
         object-fit: cover;
+        animation-name: motionImgTop-float, motionImgTop;
+        animation-duration: .6s, 3s;
+        animation-delay: 0s, .6s;
+        animation-timing-function: ease-out, ease-in-out;
+        animation-iteration-count: 1, infinite;
+        animation-fill-mode: forwards;
+        animation-direction: normal, alternate;
 
         @include breakpoint($tablet-width) {
             width: 60%;
@@ -361,8 +373,9 @@
             order: 1;
             position: static;
             transform: initial;
+            animation-name: motionImgTop-floatMobile, motionImgTopMobile;
         }
-    } */
+    }
 
     &__content {
         width: 50%;

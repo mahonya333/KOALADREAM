@@ -1,8 +1,34 @@
 $(function () {
+
   /* Старт стилизация сайта при фиксации шапки */
-  let headerHeight = $('.header').outerHeight();
-  $('.site-content').css({ 'padding-top': headerHeight + 'px' });
+  let headerHeight = $('.header').outerHeight();/* Заносим в переменную высоту шапки */
+  $('.site-content').css({ 'padding-top': headerHeight + 'px' });/* Делаем оступ */
   /* Конец стилизация сайта при фиксации шапки */
+
+  /* Старт таймера смены картинок постели на главной странице*/
+  let pictureCount = 8;/* Заносим в переменную количество картинок */
+  let pictureNumber = 1;/* Заносим в переменную номер первой картинки */
+  let pictureAutocorrectTime = 3000;/* Заносим в переменную время, за которое меняется картинка */
+  let pictureAutocorrectAllTime = pictureAutocorrectTime*pictureCount;/* Суммарное время цыкла всех картинок*/
+
+  setInterval(pictureAutocorrectTimer(pictureNumber, pictureCount, pictureAutocorrectTime), pictureAutocorrectAllTime);/* Вызываем функцию по истечению суммарного времени цыкла всех картинок */
+
+  function pictureAutocorrectTimer(pictureNumber, pictureCount, pictureAutocorrectTime) {
+
+    setInterval(function() {
+      if (pictureNumber > pictureCount) {/* Если номер картинки больше количества картинки */
+        pictureNumber = 1;/* Начинаем цыкл с первой картинки */
+        $('.main__img').attr('src','images/'+pictureNumber+'.png');/* Меняем картику */
+        pictureNumber++
+      }
+      else {
+        $('.main__img').attr('src','images/'+pictureNumber+'.png');/* Меняем картику */
+        pictureNumber++
+      }
+    }, pictureAutocorrectTime);
+      
+  }
+  /* Конец таймера смены картинок постели на главной странице*/
 
   /* Старт Slick-slider на странице about */
   $('.about-slider').slick({
@@ -25,6 +51,7 @@ $(function () {
     ]
   });
   /* Конец Slick-slider на странице about */
+
   /* Старт задаем функционал кнопкам-переключателям */
   document.querySelectorAll(".catalogue-tabs-panel__control .catalogue-tabs-panel-btn").forEach(btn => {
     btn.addEventListener('click', function () {/* При клике на одну из кнопок */
@@ -47,24 +74,23 @@ $(function () {
   if ($(document).width() < 768) {
     $('.catalogue-tabs-panel-btn').removeClass('catalogue-tabs-panel-btn--active');
   }
-
   /* Конец задаем функционал кнопкам-переключателям */
 
   /* Старт плагин formstyler */
-  setTimeout(function() {
+  setTimeout(function () {
     if ($(document).width() > 768) {
       $('select.order-form__select').styler();
     }
   }, 100)
-
   /*Конец плагин formstyler */
+
   /* Старт Slick-slider на странице product */
   $('.product-slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
-    prevArrow: '<button type="button" class="slick-prev"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M5.2582 1.76668L2.02487 5.00002L5.2582 8.23335C5.5832 8.55835 5.5832 9.08335 5.2582 9.40835C4.9332 9.73335 4.4082 9.73335 4.0832 9.40835L0.258203 5.58335C-0.0667969 5.25835 -0.0667968 4.73335 0.258203 4.40835L4.0832 0.58335C4.4082 0.25835 4.9332 0.25835 5.2582 0.58335C5.57487 0.90835 5.5832 1.44168 5.2582 1.76668Z" fill="black"/></svg></button>',
-    nextArrow: '<button type="button" class="slick-next"><svg width="6" height="10" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M0.741797 8.23332L3.97513 4.99998L0.741797 1.76665C0.416797 1.44165 0.416797 0.91665 0.741797 0.59165C1.0668 0.26665 1.5918 0.26665 1.9168 0.59165L5.7418 4.41665C6.0668 4.74165 6.0668 5.26665 5.7418 5.59165L1.9168 9.41665C1.5918 9.74165 1.0668 9.74165 0.741797 9.41665C0.42513 9.09165 0.416797 8.55832 0.741797 8.23332Z" fill="black"/></svg></button>',
+    prevArrow: '<button type="button" class="slick-prev"><img src="../images/icons/icon-arrow-left.svg"></button>',
+    nextArrow: '<button type="button" class="slick-next"><img src="../images/icons/icon-arrow-right.svg"></button>',
     dots: false,
     fade: true,
     asNavFor: '.product-slider-navigation',
@@ -94,6 +120,7 @@ $(function () {
     ]
   });
   /* Конец Slick-slider на странице product */
+  
 });
 
 function toggleCatalogueTabsBtn(button) {
